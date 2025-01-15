@@ -22,6 +22,13 @@ function adicionarAmigo() {
     input.value = ""
 }
 
+// Reconhecer Enter no teclado para adicionar amigos
+document.getElementById("amigo").addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        adicionarAmigo();
+    }
+})
+
 // Função para atualizar a lista de amigos na tela
 function atualizarListaAmigos() {
     const listaAmigos = document.getElementById("listaAmigos");
