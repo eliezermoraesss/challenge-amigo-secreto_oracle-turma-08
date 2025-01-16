@@ -1,8 +1,13 @@
 # 🎉 Amigo Secreto  
-**Um aplicativo web interativo para organizar e sortear amigos secretos de maneira simples e divertida.**  
+**Um aplicativo web interativo para organizar e sortear amigos secretos de maneira simples e divertida.**
+
+##  Acesse a aplicação online: [🟢 Amigo Secreto](https://eliezermoraesss.github.io/challenge-amigo-secreto_oracle-turma-08/)
+
+![Demonstração](assets/amigo_secreto.gif)
 
 ## 📋 Índice  
 - [🎉 Amigo Secreto](#-amigo-secreto)
+  - [Acesse a aplicação online: 🟢 Amigo Secreto](#acesse-a-aplicação-online--amigo-secreto)
   - [📋 Índice](#-índice)
   - [📝 Descrição](#-descrição)
   - [✨ Funcionalidades](#-funcionalidades)
