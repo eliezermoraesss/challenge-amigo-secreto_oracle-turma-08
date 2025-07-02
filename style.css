@@ -159,8 +159,11 @@ button {
 }
 
 .button-reset {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     padding: 10px 20px;
-    background-color: #888888;
+    background-color: var(--color-button);
     color: var(--color-white);
     border: none;
     border-radius: 25px;
@@ -171,7 +174,7 @@ button {
 }
 
 .button-reset:hover {
-    background-color: #666666;
+    background-color: var(--color-button-hover);
 }
 
 .button-delete {
