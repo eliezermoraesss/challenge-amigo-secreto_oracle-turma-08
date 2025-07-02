@@ -79,7 +79,7 @@ function sortearAmigo() {
     // Exibe o resultado na tela
     const li = document.createElement("li");
     li.className = "amigo-sorteado";
-    li.innerHTML = `<span>Amigo sorteado 🎉</span> <strong>${amigoSorteado}</strong> 🎁`;
+    li.innerHTML = `<span>Amigo sorteado 🎉</span><br><strong>${amigoSorteado}</strong> 🎁`;
     resultado.appendChild(li);
 }
 
