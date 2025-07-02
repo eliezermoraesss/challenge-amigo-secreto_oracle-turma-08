@@ -29,6 +29,15 @@ document.getElementById("amigo").addEventListener("keydown", (event) => {
     }
 })
 
+// Função para remover amigo da lista
+function removerAmigo(index) {
+    amigos.splice(index, 1);
+    atualizarListaAmigos();
+    
+    // Limpa o resultado se houver
+    document.getElementById("resultado").innerHTML = "";
+}
+
 // Função para atualizar a lista de amigos na tela
 function atualizarListaAmigos() {
     const listaAmigos = document.getElementById("listaAmigos");
@@ -39,7 +48,12 @@ function atualizarListaAmigos() {
     // Cria um <li> para cada amigo no array
     amigos.forEach((amigo, index) => {
         const li = document.createElement("li");
-        li.textContent = `${index + 1}. ${amigo}`; // Adiciona o índice e o nome do amigo
+        li.innerHTML = `
+            <span>${index + 1}. ${amigo}</span>
+            <button class="button-delete" onclick="removerAmigo(${index})" aria-label="Remover ${amigo}">
+                ×
+            </button>
+        `;
         listaAmigos.appendChild(li);
     });
 }
@@ -65,5 +79,13 @@ function sortearAmigo() {
     // Exibe o resultado na tela
     const li = document.createElement("li");
     li.textContent = `Amigo sorteado: ${amigoSorteado}`;
-    resultado.appendChild(li)
+    resultado.appendChild(li);
+}
+
+// Função para reiniciar o sorteio
+function reiniciarSorteio() {
+    amigos = [];
+    atualizarListaAmigos();
+    document.getElementById("resultado").innerHTML = "";
+    document.getElementById("amigo").value = "";
 }

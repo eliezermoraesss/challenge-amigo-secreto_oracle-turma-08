@@ -116,13 +116,73 @@ button {
 }
 
 .button-add {
-    background-color: var(--color-tertiary);
-    color: var(--color-text);
+    padding: 10px 20px;
+    background-color: var(--color-button);
+    color: var(--color-white);
+    border: none;
     border-radius: 0 25px 25px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
 .button-add:hover {
-    background-color: #a1a1a1;
+    background-color: var(--color-button-hover);
+}
+
+/* Botão de sortear título */
+.button-draw {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background-color: var(--color-button);
+    color: var(--color-white);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 20px 10px;
+    transition: background-color 0.3s;
+}
+
+.button-draw img {
+    margin-right: 40px;
+}
+
+.button-draw:hover {
+    background-color: var(--color-button-hover);
+}
+
+.button-reset {
+    padding: 10px 20px;
+    background-color: #888888;
+    color: var(--color-white);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 20px 10px;
+    transition: background-color 0.3s;
+}
+
+.button-reset:hover {
+    background-color: #666666;
+}
+
+.button-delete {
+    background: none;
+    border: none;
+    color: #ff4444;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0 8px;
+    transition: color 0.3s;
+}
+
+.button-delete:hover {
+    color: #cc0000;
 }
 
 /* Listas */
@@ -134,6 +194,24 @@ ul {
     margin: 20px 0;
 }
 
+.name-list, .result-list {
+    list-style: none;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px 0;
+}
+
+.name-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+    margin: 8px 0;
+    background-color: var(--color-white);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 .result-list {
     margin-top: 15px;
     color: #05DF05;
@@ -142,21 +220,13 @@ ul {
     text-align: center;
 }
 
-/* Botão de sortear título */
-.button-draw {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 10px 40px;
-    color: var(--color-white);
-    background-color: var(--color-button);
-    font-size: 16px;
-}
-
-.button-draw img {
-    margin-right: 40px;
-}
-
-.button-draw:hover {
-    background-color: var(--color-button-hover);
+.result-list li {
+    text-align: center;
+    padding: 16px;
+    margin: 8px 0;
+    background-color: var(--color-white);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: var(--color-primary);
+    font-weight: bold;
 }
